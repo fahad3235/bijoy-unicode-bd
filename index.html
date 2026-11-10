@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bijoy to Unicode Converter &mdash; bijoy-unicode-bd</title>
+<meta name="description" content="Convert SutonnyMJ (Bijoy 2000) text to Unicode Bangla and back, fully offline in your browser.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="wrap">
+  <header class="head">
+    <div>
+      <h1 id="title">Bijoy to Unicode Converter</h1>
+      <p id="subtitle" class="sub"></p>
+    </div>
+    <button id="langBtn" class="btn ghost" type="button">Bangla</button>
+  </header>
+
+  <section class="dir" aria-label="Direction">
+    <button id="dirB2U" class="seg active" type="button">Bijoy to Unicode</button>
+    <button id="dirU2B" class="seg" type="button">Unicode to Bijoy</button>
+    <button id="swapBtn" class="btn ghost" type="button">Swap direction</button>
+  </section>
+
+  <section class="panel">
+    <label id="inputLabel" class="lbl" for="inputText">Bijoy text</label>
+    <textarea id="inputText" rows="7" spellcheck="false"></textarea>
+    <div id="inputCount" class="count"></div>
+  </section>
+
+  <section class="actions">
+    <button id="copyBtn" class="btn primary" type="button">Copy result</button>
+    <button id="clearBtn" class="btn" type="button">Clear</button>
+    <button id="downloadBtn" class="btn" type="button">Download .txt</button>
+    <button id="uploadBtn" class="btn" type="button">Open .txt file</button>
+    <input id="fileInput" type="file" accept=".txt,text/plain" hidden>
+    <button id="verifyBtn" class="btn" type="button">Verify round-trip</button>
+    <span id="copyMsg" class="msg" role="status"></span>
+  </section>
+
+  <section class="panel">
+    <label id="outputLabel" class="lbl" for="outputText">Unicode Bangla</label>
+    <textarea id="outputText" rows="7" readonly spellcheck="false"></textarea>
+    <div id="outputCount" class="count"></div>
+    <p id="emptyHint" class="hint"></p>
+    <p id="verifyResult" class="verify" hidden></p>
+  </section>
+
+  <section class="samples">
+    <span id="samplesLabel">Try a sample:</span>
+    <button id="sample1Btn" class="btn small" type="button">Famous line</button>
+    <button id="sample2Btn" class="btn small" type="button">Paragraph</button>
+    <button id="sample3Btn" class="btn small" type="button">Conjuncts</button>
+  </section>
+
+  <section class="notes">
+    <h2 id="notesTitle">Good to know</h2>
+    <ul id="notesList"></ul>
+  </section>
+
+  <footer class="foot">
+    <p id="credit">Conversion table: OpenBangla Poriborton (MIT) &mdash; Bijoy 2000 (SutonnyMJ). 100% offline; your text never leaves this page.</p>
+  </footer>
+</main>
+<script src="js/data.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/convert.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
